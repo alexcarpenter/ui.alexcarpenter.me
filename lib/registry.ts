@@ -36,3 +36,22 @@ export async function getItemFromRegistry(name: string) {
 
   return { ...parsed, files: filesWithContent }
 }
+
+export async function getItemFromPublicRegistry(name: string) {
+  try {
+    const filePath = path.join(process.cwd(), "public", "r", `${name}.json`)
+    const content = await fs.readFile(filePath, "utf8")
+    const item = JSON.parse(content)
+
+    const parsed = registryItemSchema.parse(item)
+
+    if (!parsed) {
+      return null
+    }
+
+    return parsed
+  } catch (error) {
+    console.error(`Error loading ${name} from public registry:`, error)
+    return null
+  }
+}

@@ -15,12 +15,22 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@radix-ui/react-dialog": "1.1.15",
+    "@radix-ui/react-separator": "1.1.7",
+    "@radix-ui/react-slot": "1.2.3",
+    "@radix-ui/react-tabs": "1.1.13",
+    "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
     "lucide-react": "0.542.0",
     "next": "15.5.2",
+    "next-themes": "0.4.6",
     "radix-ui": "1.4.3",
+    "react-resizable-panels": "3.0.5",
     "shadcn": "3.1.0",
-    "tailwind-merge": "3.3.1"
+    "shiki": "3.12.1",
+    "sonner": "2.0.7",
+    "tailwind-merge": "3.3.1",
+    "zod": "4.1.5"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
