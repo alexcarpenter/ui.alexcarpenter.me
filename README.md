@@ -13,7 +13,12 @@ npx shadcn@latest add https://ui.alexcarpenter.me/r/info-list.json
 #### Usage
 
 ```tsx
-import { InfoList } from "@/components/info-list.tsx"
+import {
+  InfoList,
+  InfoListIcon,
+  InfoListHeader,
+  InfoListItem,
+} from "@/components/info-list"
 import { UserIcon } from "lucide-react"
 
 export default function Example() {
@@ -51,10 +56,7 @@ npx shadcn@latest add https://ui.alexcarpenter.me/r/inline-text.json
 #### Usage
 
 ```tsx
-import {
-  InlineText,
-  InlineTextIcon,
-} from "@/registry/default/components/inline-text"
+import { InlineText, InlineTextIcon } from "@/components/inline-text"
 import Link from "next/link"
 import { ExternalLink } from "lucide-react"
 
