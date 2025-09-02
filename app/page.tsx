@@ -62,7 +62,7 @@ export default async function Home() {
               </div>
               <div className="flex gap-2">
                 <AddCommand registryItem={registryItem} />
-                <OpenInV0 name={registryItem.name} className="w-fit" />
+                <OpenInV0 name={item.example.name} className="w-fit" />
               </div>
             </div>
             <Preview>
