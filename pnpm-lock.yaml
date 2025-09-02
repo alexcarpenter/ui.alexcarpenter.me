@@ -7,6 +7,9 @@ settings:
 importers:
   .:
     dependencies:
+      "@radix-ui/react-slot":
+        specifier: 1.2.3
+        version: 1.2.3(@types/react@19.1.12)(react@19.1.1)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -867,6 +870,30 @@ packages:
       {
         integrity: sha512-U69T3ItWHvLwGg5eJ0n3I62nWuE6ilHlmz7zM0npLBRvPRd7e6NYmg54vvRtP5mZG7kZqZCFVdsTWo7BPtBujg==,
       }
+
+  "@radix-ui/react-compose-refs@1.1.2":
+    resolution:
+      {
+        integrity: sha512-z4eqJvfiNnFMHIIvXP3CY57y2WJs5g2v3X0zm9mEJkrkNv4rDxu+sg9Jh8EkXyeqBkB7SOcboo9dMVqhyrACIg==,
+      }
+    peerDependencies:
+      "@types/react": "*"
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      "@types/react":
+        optional: true
+
+  "@radix-ui/react-slot@1.2.3":
+    resolution:
+      {
+        integrity: sha512-aeNmHnBxbi2St0au6VBVC7JXFlhLlOnvIIlePNniyUNAClzmtAUEY8/pBiK3iHjufOlwA+c20/8jngo7xcrg8A==,
+      }
+    peerDependencies:
+      "@types/react": "*"
+      react: ^16.8 || ^17.0 || ^18.0 || ^19.0 || ^19.0.0-rc
+    peerDependenciesMeta:
+      "@types/react":
+        optional: true
 
   "@rtsao/scc@1.1.0":
     resolution:
@@ -5242,6 +5269,19 @@ snapshots:
       outvariant: 1.4.3
 
   "@open-draft/until@2.1.0": {}
+
+  "@radix-ui/react-compose-refs@1.1.2(@types/react@19.1.12)(react@19.1.1)":
+    dependencies:
+      react: 19.1.1
+    optionalDependencies:
+      "@types/react": 19.1.12
+
+  "@radix-ui/react-slot@1.2.3(@types/react@19.1.12)(react@19.1.1)":
+    dependencies:
+      "@radix-ui/react-compose-refs": 1.1.2(@types/react@19.1.12)(react@19.1.1)
+      react: 19.1.1
+    optionalDependencies:
+      "@types/react": 19.1.12
 
   "@rtsao/scc@1.1.0": {}
 

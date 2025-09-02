@@ -3,12 +3,12 @@
   "name": "info-list",
   "type": "registry:component",
   "title": "Info List",
-  "description": "A list of information.",
+  "description": "A list of information with slots for header, item, and icon.",
   "dependencies": [],
   "files": [
     {
       "path": "registry/default/components/info-list.tsx",
-      "content": "import { cn } from \"@/lib/utils\"\n\nexport function InfoList({ className, ...props }: React.ComponentProps<\"ul\">) {\n  return <ul {...props} className={cn(\"flex flex-col gap-2\", className)} data-slot=\"list\" />\n}\n\nexport function InfoListItem({ className, ...props }: React.ComponentProps<\"li\">) {\n  return <li {...props} className={cn(\"flex gap-2 has-[*[data-slot='header']]:flex-col\", className)} data-slot=\"item\" />\n}\n\nexport function InfoListHeader({ className, ...props }: React.ComponentProps<\"header\">) {\n  return <header {...props} className={cn(\"flex gap-2\", className)} data-slot=\"header\" />\n}\n\nexport function InfoListIcon({ className, ...props }: React.ComponentProps<\"span\">) {\n  return <span {...props} className={cn(\"flex h-[1lh] items-center flex-none [&>svg]:size-[1em]\", className)} data-slot=\"icon\" />\n}\n",
+      "content": "import { cn } from \"@/lib/utils\"\n\nexport function InfoList({ className, ...props }: React.ComponentProps<\"ul\">) {\n  return (\n    <ul\n      {...props}\n      className={cn(\"flex flex-col gap-2\", className)}\n      data-slot=\"list\"\n    />\n  )\n}\n\nexport function InfoListItem({\n  className,\n  ...props\n}: React.ComponentProps<\"li\">) {\n  return (\n    <li\n      {...props}\n      className={cn(\n        \"flex gap-2 has-[*[data-slot='header']]:flex-col\",\n        className\n      )}\n      data-slot=\"item\"\n    />\n  )\n}\n\nexport function InfoListHeader({\n  className,\n  ...props\n}: React.ComponentProps<\"header\">) {\n  return (\n    <header\n      {...props}\n      className={cn(\"flex gap-2\", className)}\n      data-slot=\"header\"\n    />\n  )\n}\n\nexport function InfoListIcon({\n  className,\n  ...props\n}: React.ComponentProps<\"span\">) {\n  return (\n    <span\n      {...props}\n      className={cn(\n        \"flex h-[1lh] items-center flex-none [&>svg]:size-[1em]\",\n        className\n      )}\n      data-slot=\"icon\"\n    />\n  )\n}\n",
       "type": "registry:component"
     }
   ]

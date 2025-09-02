@@ -7,11 +7,22 @@
       "name": "info-list",
       "type": "registry:component",
       "title": "Info List",
-      "description": "A list of information.",
-      "dependencies": [],
+      "description": "A list of information with slots for header, item, and icon.",
       "files": [
         {
           "path": "registry/default/components/info-list.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "inline-text",
+      "type": "registry:component",
+      "title": "Inline text with icon slot.",
+      "description": "A text with an icon slot.",
+      "files": [
+        {
+          "path": "registry/default/components/inline-text.tsx",
           "type": "registry:component"
         }
       ]

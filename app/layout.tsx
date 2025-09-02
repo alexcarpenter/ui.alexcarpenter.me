@@ -46,9 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${fontSans.variable} font-sans`}>
-        {children}
-      </body>
+      <body className={`${fontSans.variable} font-sans`}>{children}</body>
     </html>
   )
 }
