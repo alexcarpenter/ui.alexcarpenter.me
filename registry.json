@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "alexcarpenter",
+  "homepage": "https://ui.alexcarpenter.me",
+  "items": [
+    {
+      "name": "info-list",
+      "type": "registry:component",
+      "title": "Info List",
+      "description": "A list of information.",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/default/components/info-list.tsx",
+          "type": "registry:component"
+        }
+      ]
+    }
+  ]
+}
