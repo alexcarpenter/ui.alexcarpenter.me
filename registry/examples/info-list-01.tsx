@@ -7,8 +7,8 @@ import { UserIcon } from "lucide-react"
 
 export function ExampleInfoList01() {
   return (
-    <div className="@container w-full space-y-8">
-      <InfoList className="grid grid-cols-1 @md:grid-cols-3 gap-8">
+    <div className="@container w-full">
+      <InfoList className="grid grid-cols-1 @md:grid-cols-3 @md:gap-8">
         <InfoListItem>
           <InfoListIcon>
             <UserIcon />
