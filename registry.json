@@ -31,7 +31,17 @@
       "name": "pricing-table",
       "type": "registry:ui",
       "title": "Pricing Table",
-      "description": "",
+      "description": "A pricing table component with support for monthly/yearly pricing.",
+      "dependencies": [
+        "@number-flow/react",
+        "@radix-ui/react-use-controllable-state",
+        "card",
+        "badge",
+        "button",
+        "switch",
+        "toggle-group"
+      ],
+      "registryDependencies": ["@alexcarpenter/info-list"],
       "files": [
         {
           "path": "registry/default/ui/pricing-table.tsx",

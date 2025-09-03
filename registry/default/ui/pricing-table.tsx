@@ -1,6 +1,9 @@
 "use client"
 
+import * as React from "react"
+import { cn } from "@/lib/utils"
 import { Badge } from "@/registry/default/ui/badge"
+import { Button } from "@/registry/default/ui/button"
 import {
   Card,
   CardAction,
@@ -10,17 +13,19 @@ import {
   CardHeader,
   CardTitle,
 } from "@/registry/default/ui/card"
+import {
+  InfoList,
+  InfoListIcon,
+  InfoListItem,
+  InfoListText,
+} from "@/registry/default/ui/info-list"
 import { Switch } from "@/registry/default/ui/switch"
 import {
   ToggleGroup,
   ToggleGroupItem,
 } from "@/registry/default/ui/toggle-group"
-import { cn } from "@/lib/utils"
 import NumberFlow from "@number-flow/react"
 import { useControllableState } from "@radix-ui/react-use-controllable-state"
-import { BadgeCheck } from "lucide-react"
-import * as React from "react"
-import { Button } from "@/registry/default/ui/button"
 
 type BillingPeriod = "monthly" | "yearly"
 export type { BillingPeriod as PricingTableBillingPeriod }
@@ -376,6 +381,37 @@ export function PricingTableCardContent({
       {...props}
     />
   )
+}
+
+export function PricingTableCardList(
+  props: React.ComponentProps<typeof InfoList>
+) {
+  return <InfoList {...props} />
+}
+
+export function PricingTableCardListItem({
+  className,
+  ...props
+}: React.ComponentProps<typeof InfoListItem>) {
+  return <InfoListItem {...props} className={cn("gap-2 text-sm", className)} />
+}
+
+export function PricingTableCardListIcon({
+  className,
+  ...props
+}: React.ComponentProps<typeof InfoListIcon>) {
+  return (
+    <InfoListIcon
+      {...props}
+      className={cn("text-muted-foreground", className)}
+    />
+  )
+}
+
+export function PricingTableCardListText(
+  props: React.ComponentProps<typeof InfoListText>
+) {
+  return <InfoListText {...props} />
 }
 
 export function PricingTableCardFooter({

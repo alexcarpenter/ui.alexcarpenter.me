@@ -8,6 +8,10 @@ import {
   PricingTableCardDescription,
   PricingTableCardFooter,
   PricingTableCardHeader,
+  PricingTableCardList,
+  PricingTableCardListIcon,
+  PricingTableCardListItem,
+  PricingTableCardListText,
   PricingTableCardPrice,
   PricingTableCardTitle,
   PricingTableGrid,
@@ -15,12 +19,6 @@ import {
   PricingTableSwitchGroup,
   PricingTableSwitchItem,
 } from "@/registry/default/ui/pricing-table"
-import {
-  InfoList,
-  InfoListIcon,
-  InfoListItem,
-  InfoListText,
-} from "@/registry/default/ui/info-list"
 import { BadgeCheck } from "lucide-react"
 
 export function ExamplePricingTable01() {
@@ -44,16 +42,18 @@ export function ExamplePricingTable01() {
             </PricingTableCardAction>
           </PricingTableCardHeader>
           <PricingTableCardContent>
-            <InfoList>
+            <PricingTableCardList>
               {Array.from({ length: 3 }).map((_, index) => (
-                <InfoListItem key={index} className="gap-2 text-sm">
-                  <InfoListIcon className="text-muted-foreground">
+                <PricingTableCardListItem key={index}>
+                  <PricingTableCardListIcon>
                     <BadgeCheck />
-                  </InfoListIcon>
-                  <InfoListText>Lorem ipsum dolor sit amet.</InfoListText>
-                </InfoListItem>
+                  </PricingTableCardListIcon>
+                  <PricingTableCardListText>
+                    Lorem ipsum dolor sit amet.
+                  </PricingTableCardListText>
+                </PricingTableCardListItem>
               ))}
-            </InfoList>
+            </PricingTableCardList>
           </PricingTableCardContent>
           <PricingTableCardFooter>
             <PricingTableCardButton>Subscribe to Basic</PricingTableCardButton>
@@ -72,16 +72,18 @@ export function ExamplePricingTable01() {
             </PricingTableCardAction>
           </PricingTableCardHeader>
           <PricingTableCardContent>
-            <InfoList>
+            <PricingTableCardList>
               {Array.from({ length: 5 }).map((_, index) => (
-                <InfoListItem key={index} className="gap-2 text-sm">
-                  <InfoListIcon className="text-muted-foreground">
+                <PricingTableCardListItem key={index}>
+                  <PricingTableCardListIcon>
                     <BadgeCheck />
-                  </InfoListIcon>
-                  <InfoListText>Lorem ipsum dolor sit amet.</InfoListText>
-                </InfoListItem>
+                  </PricingTableCardListIcon>
+                  <PricingTableCardListText>
+                    Lorem ipsum dolor sit amet.
+                  </PricingTableCardListText>
+                </PricingTableCardListItem>
               ))}
-            </InfoList>
+            </PricingTableCardList>
           </PricingTableCardContent>
           <PricingTableCardFooter>
             <PricingTableCardButton>Subscribe to Pro</PricingTableCardButton>
@@ -96,16 +98,18 @@ export function ExamplePricingTable01() {
             </PricingTableCardDescription>
           </PricingTableCardHeader>
           <PricingTableCardContent>
-            <InfoList>
+            <PricingTableCardList>
               {Array.from({ length: 7 }).map((_, index) => (
-                <InfoListItem key={index} className="gap-2 text-sm">
-                  <InfoListIcon className="text-muted-foreground">
+                <PricingTableCardListItem key={index}>
+                  <PricingTableCardListIcon>
                     <BadgeCheck />
-                  </InfoListIcon>
-                  <InfoListText>Lorem ipsum dolor sit amet.</InfoListText>
-                </InfoListItem>
+                  </PricingTableCardListIcon>
+                  <PricingTableCardListText>
+                    Lorem ipsum dolor sit amet.
+                  </PricingTableCardListText>
+                </PricingTableCardListItem>
               ))}
-            </InfoList>
+            </PricingTableCardList>
           </PricingTableCardContent>
           <PricingTableCardFooter>
             <PricingTableCardButton>Contact us</PricingTableCardButton>
