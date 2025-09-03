@@ -1,15 +1,19 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 import { Providers } from "@/components/providers"
 import { Toaster } from "sonner"
-import Link from "next/link"
 import { RegistrySetup } from "@/components/registry-setup"
-import { Separator } from "@/registry/default/ui/separator"
 import { ModeToggle } from "@/components/mode-toggle"
+import { cn } from "@/lib/utils"
 
 const fontSans = Inter({
   variable: "--font-sans",
+  subsets: ["latin"],
+})
+
+const fontMono = JetBrains_Mono({
+  variable: "--font-mono",
   subsets: ["latin"],
 })
 
@@ -51,17 +55,28 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
-      <body className={`${fontSans.variable} font-sans`}>
+    <html lang="en" className="dark h-full" suppressHydrationWarning>
+      <body
+        className={cn("font-sans antialiased flex flex-col min-h-full", [
+          fontSans.variable,
+          fontMono.variable,
+        ])}
+      >
         <Providers>
           <header className="border-b sticky top-0 z-40 bg-background/80 backdrop-blur-sm">
             <div className="max-w-7xl mx-auto flex items-center p-4">
               <div className="flex items-center gap-4">
-                <Link href="/">ui.alexcarpenter.me</Link>
-                <Separator orientation="vertical" className="!h-6" />
-                <p className="text-muted-foreground hidden md:block line-clamp-1 text-sm">
-                  shadcn/ui registry by Alex Carpenter
-                </p>
+                <h1 className="text-muted-foreground font-medium text-sm tracking-tight">
+                  shadcn/ui registry by{" "}
+                  <a
+                    href="https://alexcarpenter.me"
+                    target="_blank"
+                    rel="noopenner noreferrer"
+                    className="underline text-foreground"
+                  >
+                    Alex Carpenter
+                  </a>
+                </h1>
               </div>
               <div className="ml-auto flex gap-2">
                 <RegistrySetup />

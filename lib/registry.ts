@@ -1,57 +1,11 @@
-import path from "path"
-import { promises as fs } from "fs"
+import * as React from "react"
 import { registryItemSchema } from "shadcn/schema"
 
-export async function getItemFromRegistry(name: string) {
-  const registryData = await import("@/registry.json")
-  const registry = registryData.default
-
-  if (name === "registry") {
-    return registry
-  }
-
-  const component = registry.items.find((c) => c.name === name)
-
-  if (!component) {
+export const getRegistryItemFromJson = React.cache(async (name: string) => {
+  const content = await import(`@/public/r/${name}.json`)
+  const result = registryItemSchema.safeParse(content)
+  if (!result.success) {
     return null
   }
-
-  const parsed = registryItemSchema.parse(component)
-
-  if (!parsed) {
-    return null
-  }
-
-  if (!parsed.files?.length) {
-    return null
-  }
-
-  const filesWithContent = await Promise.all(
-    parsed.files.map(async (file) => {
-      const filePath = path.join(process.cwd(), file.path)
-      const content = await fs.readFile(filePath, "utf8")
-      return { ...file, content }
-    })
-  )
-
-  return { ...parsed, files: filesWithContent }
-}
-
-export async function getItemFromPublicRegistry(name: string) {
-  try {
-    const filePath = path.join(process.cwd(), "public", "r", `${name}.json`)
-    const content = await fs.readFile(filePath, "utf8")
-    const item = JSON.parse(content)
-
-    const parsed = registryItemSchema.parse(item)
-
-    if (!parsed) {
-      return null
-    }
-
-    return parsed
-  } catch (error) {
-    console.error(`Error loading ${name} from public registry:`, error)
-    return null
-  }
-}
+  return result.data
+})

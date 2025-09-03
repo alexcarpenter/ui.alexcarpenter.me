@@ -12,7 +12,7 @@ export function Preview({ children }: { children: React.ReactNode }) {
           defaultSize={100}
           minSize={30}
           maxSize={100}
-          className="flex items-center border rounded-lg justify-center min-h-[400px] p-4 md:p-10 relative bg-[color-mix(in_srgb,var(--color-background),var(--color-muted)_30%)]"
+          className="flex items-center border rounded-lg justify-center min-h-[40rem] p-4 md:p-10 relative bg-surface @container/preview"
         >
           {children}
         </Panel>

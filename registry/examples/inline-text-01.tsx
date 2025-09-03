@@ -3,7 +3,7 @@ import { ExternalLink } from "lucide-react"
 
 export function ExampleInlineText01() {
   return (
-    <p>
+    <p className="max-w-md">
       <InlineText asChild className="text-primary">
         <a href="">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
