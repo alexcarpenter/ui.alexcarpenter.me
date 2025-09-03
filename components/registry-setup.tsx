@@ -67,7 +67,7 @@ export function RegistrySetup({
           Copy and paste the code into{" "}
           <code className="font-mono text-foreground">components.json</code>
         </div>
-        <div className="relative">
+        <div className="relative min-w-0">
           <Button
             variant="outline"
             size="icon"
@@ -76,7 +76,7 @@ export function RegistrySetup({
           >
             {isCopied ? <CheckIcon /> : <CopyIcon />}
           </Button>
-          <div className="overflow-x-auto bg-muted p-8 rounded-md min-h-[120px]">
+          <div className="overflow-x-auto max-w-full bg-muted p-4 rounded-md">
             <pre className="text-sm font-mono">
               <code>{registrySetupCode}</code>
             </pre>
@@ -85,7 +85,7 @@ export function RegistrySetup({
         <div className="font-medium">
           Then use the following command to add components:
         </div>
-        <div className="overflow-x-auto bg-muted p-8 rounded-md min-h-[50px]">
+        <div className="overflow-x-auto bg-muted p-4 rounded-md">
           <pre className="text-sm font-mono">
             <code>npx shadcn@latest add @alexcarpenter/[component-name]</code>
           </pre>
