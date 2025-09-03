@@ -6,11 +6,7 @@ import { CheckIcon } from "lucide-react"
 import { type RegistryItem } from "shadcn/schema"
 import { toast } from "sonner"
 
-export function AddCommand({
-  registryItem,
-}: {
-  registryItem: RegistryItem
-}) {
+export function AddCommand({ registryItem }: { registryItem: RegistryItem }) {
   const { isCopied, copyToClipboard } = useCopyToClipboard()
 
   return (

@@ -38,7 +38,7 @@ const getRegistryItemFromJson = React.cache((name: string) => {
 
 export default async function Home() {
   return (
-    <main className="max-w-7xl mx-auto flex flex-col px-4 py-8 flex-1 gap-8 md:gap-12">
+    <main className="max-w-7xl mx-auto flex flex-col px-4 py-12 flex-1 gap-8 md:gap-12">
       {items.map(async (item) => {
         const registryItem = getRegistryItemFromJson(item.name)
         if (!registryItem) {

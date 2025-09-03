@@ -14,7 +14,7 @@ const fontSans = Inter({
 })
 
 const title = "ui.alexcarpenter.me"
-const description = ""
+const description = "shadcn/ui registry by Alex Carpenter"
 
 export const metadata: Metadata = {
   title: {
@@ -54,12 +54,10 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${fontSans.variable} font-sans`}>
         <Providers>
-          <header>
+          <header className="border-b">
             <div className="max-w-7xl mx-auto flex items-center px-4 py-6">
               <div className="flex items-center gap-4">
-                <Link href="/">
-                  ui.alexcarpenter.me
-                </Link>
+                <Link href="/">ui.alexcarpenter.me</Link>
                 <Separator orientation="vertical" className="!h-6" />
                 <p className="text-muted-foreground hidden md:block line-clamp-1 text-sm">
                   shadcn/ui registry by Alex Carpenter

@@ -2,35 +2,43 @@ import {
   InfoList,
   InfoListItem,
   InfoListIcon,
+  InfoListText,
 } from "@/registry/default/components/info-list"
-import { UserIcon } from "lucide-react"
+import { Expand, Aperture, Palette } from "lucide-react"
 
 export function ExampleInfoList01() {
   return (
     <div className="@container w-full">
-      <InfoList className="grid grid-cols-1 @md:grid-cols-3 @md:gap-8">
+      <InfoList className="grid grid-cols-1 @md:grid-cols-3 gap-8">
         <InfoListItem>
           <InfoListIcon>
-            <UserIcon />
+            <Expand />
           </InfoListIcon>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis
-          voluptates sint.
+          <InfoListText>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
+            eaque quidem rem.
+          </InfoListText>
         </InfoListItem>
 
         <InfoListItem>
           <InfoListIcon>
-            <UserIcon />
+            <Aperture />
           </InfoListIcon>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis
-          voluptates sint.
+          <InfoListText>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga porro
+            magnam expedita blanditiis recusandae excepturi veritatis
+            repudiandae.
+          </InfoListText>
         </InfoListItem>
 
         <InfoListItem>
           <InfoListIcon>
-            <UserIcon />
+            <Palette />
           </InfoListIcon>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis
-          voluptates sint.
+          <InfoListText>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus
+            excepturi doloribus velit qui enim.
+          </InfoListText>
         </InfoListItem>
       </InfoList>
     </div>

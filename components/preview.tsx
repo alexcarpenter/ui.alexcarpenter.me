@@ -17,7 +17,7 @@ export function Preview({ children }: { children: React.ReactNode }) {
           {children}
         </Panel>
         <PanelResizeHandle className="flex w-3 items-center justify-center bg-transparent">
-          <span className="h-8 w-1 rounded-sm bg-neutral-300 dark:bg-neutral-700" />
+          <span className="h-8 w-1 rounded-sm bg-border" />
         </PanelResizeHandle>
         <Panel defaultSize={0} minSize={0} />
       </PanelGroup>

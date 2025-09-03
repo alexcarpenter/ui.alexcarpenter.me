@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils"
+import { Slot } from "radix-ui"
 
 export function InfoList({ className, ...props }: React.ComponentProps<"ul">) {
   return (
@@ -18,7 +19,7 @@ export function InfoListItem({
     <li
       {...props}
       className={cn(
-        "flex gap-2 has-[*[data-slot='header']]:flex-col",
+        "flex gap-4 has-[*[data-slot='header']]:flex-col",
         className
       )}
       data-slot="item"
@@ -33,7 +34,7 @@ export function InfoListHeader({
   return (
     <header
       {...props}
-      className={cn("flex gap-2", className)}
+      className={cn("flex gap-4", className)}
       data-slot="header"
     />
   )
@@ -51,6 +52,21 @@ export function InfoListIcon({
         className
       )}
       data-slot="icon"
+    />
+  )
+}
+
+export function InfoListText({
+  className,
+  asChild,
+  ...props
+}: React.ComponentProps<"p"> & { asChild?: boolean }) {
+  const Comp = asChild ? Slot.Root : "p"
+  return (
+    <Comp
+      {...props}
+      className={cn("text-pretty", className)}
+      data-slot="text"
     />
   )
 }
