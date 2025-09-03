@@ -4,7 +4,7 @@
   "type": "registry:block",
   "title": "Info List without header",
   "description": "An example of the info list component without a header.",
-  "dependencies": ["@radix-ui/react-slot", "lucide-react"],
+  "dependencies": ["lucide-react", "@radix-ui/react-slot"],
   "files": [
     {
       "path": "registry/examples/info-list-01.tsx",

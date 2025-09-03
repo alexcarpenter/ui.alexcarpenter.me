@@ -4,7 +4,7 @@
   "type": "registry:block",
   "title": "Inline Text",
   "description": "An example of the inline text component with an icon slot.",
-  "dependencies": ["@radix-ui/react-slot", "lucide-react"],
+  "dependencies": ["lucide-react", "@radix-ui/react-slot"],
   "files": [
     {
       "path": "registry/examples/inline-text-01.tsx",
