@@ -28,6 +28,28 @@
       ]
     },
     {
+      "name": "pricing-table",
+      "type": "registry:ui",
+      "title": "Pricing Table",
+      "description": "A pricing table component with support for monthly/yearly pricing.",
+      "dependencies": [
+        "@number-flow/react",
+        "@radix-ui/react-use-controllable-state",
+        "card",
+        "badge",
+        "button",
+        "switch",
+        "toggle-group"
+      ],
+      "registryDependencies": ["@alexcarpenter/info-list"],
+      "files": [
+        {
+          "path": "registry/default/ui/pricing-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "example-info-list-01",
       "type": "registry:block",
       "title": "Info List without header",

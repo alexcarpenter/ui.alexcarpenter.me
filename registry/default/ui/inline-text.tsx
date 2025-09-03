@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import { Slot } from "radix-ui"
+import { Slot } from "@radix-ui/react-slot"
 
 export function InlineText({
   className,
@@ -8,7 +8,7 @@ export function InlineText({
 }: React.ComponentProps<"span"> & {
   asChild?: boolean
 }) {
-  const Comp = asChild ? Slot.Root : "span"
+  const Comp = asChild ? Slot : "span"
 
   return (
     <Comp

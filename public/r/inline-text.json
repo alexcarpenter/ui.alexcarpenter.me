@@ -4,11 +4,11 @@
   "type": "registry:ui",
   "title": "Inline Text",
   "description": "An inline text component with an icon slot that wraps perfectly with the text.",
-  "dependencies": ["radix-ui"],
+  "dependencies": ["@radix-ui/react-slot"],
   "files": [
     {
       "path": "registry/default/ui/inline-text.tsx",
-      "content": "import { cn } from \"@/lib/utils\"\nimport { Slot } from \"radix-ui\"\n\nexport function InlineText({\n  className,\n  asChild,\n  ...props\n}: React.ComponentProps<\"span\"> & {\n  asChild?: boolean\n}) {\n  const Comp = asChild ? Slot.Root : \"span\"\n\n  return (\n    <Comp\n      className={cn(\"relative inline-block pr-[1.25em]\", className)}\n      {...props}\n    />\n  )\n}\n\nexport function InlineTextIcon({\n  className,\n  ...props\n}: React.ComponentProps<\"span\">) {\n  return (\n    <span\n      className={cn(\n        \"absolute ml-[.25em] inline-flex h-[1lh] items-center flex-none [&>svg]:size-[1em]\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n",
+      "content": "import { cn } from \"@/lib/utils\"\nimport { Slot } from \"@radix-ui/react-slot\"\n\nexport function InlineText({\n  className,\n  asChild,\n  ...props\n}: React.ComponentProps<\"span\"> & {\n  asChild?: boolean\n}) {\n  const Comp = asChild ? Slot : \"span\"\n\n  return (\n    <Comp\n      className={cn(\"relative inline-block pr-[1.25em]\", className)}\n      {...props}\n    />\n  )\n}\n\nexport function InlineTextIcon({\n  className,\n  ...props\n}: React.ComponentProps<\"span\">) {\n  return (\n    <span\n      className={cn(\n        \"absolute ml-[.25em] inline-flex h-[1lh] items-center flex-none [&>svg]:size-[1em]\",\n        className\n      )}\n      {...props}\n    />\n  )\n}\n",
       "type": "registry:ui"
     }
   ]
