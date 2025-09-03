@@ -5,25 +5,25 @@
   "items": [
     {
       "name": "info-list",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Info List",
       "description": "A list component with support for items, headers, and icons slots.",
       "files": [
         {
-          "path": "registry/default/components/info-list.tsx",
-          "type": "registry:component"
+          "path": "registry/default/ui/info-list.tsx",
+          "type": "registry:ui"
         }
       ]
     },
     {
       "name": "inline-text",
-      "type": "registry:component",
+      "type": "registry:ui",
       "title": "Inline Text",
       "description": "An inline text component with an icon slot that wraps perfectly with the text.",
       "files": [
         {
-          "path": "registry/default/components/inline-text.tsx",
-          "type": "registry:component"
+          "path": "registry/default/ui/inline-text.tsx",
+          "type": "registry:ui"
         }
       ]
     },

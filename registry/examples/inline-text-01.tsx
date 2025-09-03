@@ -1,7 +1,4 @@
-import {
-  InlineText,
-  InlineTextIcon,
-} from "@/registry/default/components/inline-text"
+import { InlineText, InlineTextIcon } from "@/registry/default/ui/inline-text"
 import { ExternalLink } from "lucide-react"
 
 export function ExampleInlineText01() {

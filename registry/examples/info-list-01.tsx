@@ -3,7 +3,7 @@ import {
   InfoListItem,
   InfoListIcon,
   InfoListText,
-} from "@/registry/default/components/info-list"
+} from "@/registry/default/ui/info-list"
 import { Expand, Aperture, Palette } from "lucide-react"
 
 export function ExampleInfoList01() {
