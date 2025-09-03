@@ -12,7 +12,6 @@ import {
   DialogTrigger,
 } from "@/registry/default/ui/dialog"
 import { CopyTrigger } from "@/components/copy-trigger"
-import { CodeBlock } from "./code-block"
 
 export function RegistrySetup({
   className,

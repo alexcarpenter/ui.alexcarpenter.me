@@ -1,5 +1,4 @@
 import * as React from "react"
-import { registryItemSchema } from "shadcn/schema"
 import { ExampleInfoList01 } from "@/registry/examples/info-list-01"
 import { ExampleInlineText01 } from "@/registry/examples/inline-text-01"
 import { OpenInV0 } from "@/components/open-in-v0"
@@ -13,6 +12,7 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/registry/default/ui/tabs"
+import { getRegistryItemFromJson } from "@/lib/registry"
 
 const items = [
   {
@@ -30,15 +30,6 @@ const items = [
     },
   },
 ]
-
-const getRegistryItemFromJson = React.cache(async (name: string) => {
-  const content = await import(`@/public/r/${name}.json`)
-  const result = registryItemSchema.safeParse(content)
-  if (!result.success) {
-    return null
-  }
-  return result.data
-})
 
 export default async function Home() {
   return (
