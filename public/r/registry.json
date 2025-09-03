@@ -72,6 +72,18 @@
           "type": "registry:component"
         }
       ]
+    },
+    {
+      "name": "example-pricing-table-01",
+      "type": "registry:block",
+      "title": "Pricing Table",
+      "description": "A pricing table component with support for monthly/yearly pricing.",
+      "files": [
+        {
+          "path": "registry/examples/pricing-table-01.tsx",
+          "type": "registry:component"
+        }
+      ]
     }
   ]
 }
