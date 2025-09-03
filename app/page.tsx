@@ -41,7 +41,7 @@ const items = [
 
 export default async function Home() {
   return (
-    <main className="max-w-7xl mx-auto w-full flex flex-col px-4 py-12 md:py-24 flex-1 gap-12 md:gap-24">
+    <main className="max-w-7xl mx-auto w-full flex flex-col px-4 py-12 flex-1 gap-12">
       {await Promise.all(
         items.map(async (item) => {
           const registryItem = await getRegistryItemFromJson(item.name)
