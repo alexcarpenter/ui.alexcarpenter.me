@@ -28,6 +28,18 @@
       ]
     },
     {
+      "name": "pricing-table",
+      "type": "registry:ui",
+      "title": "Pricing Table",
+      "description": "",
+      "files": [
+        {
+          "path": "registry/default/ui/pricing-table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
       "name": "example-info-list-01",
       "type": "registry:block",
       "title": "Info List without header",

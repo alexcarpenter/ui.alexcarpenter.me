@@ -13,6 +13,7 @@ import {
   TabsTrigger,
 } from "@/registry/default/ui/tabs"
 import { getRegistryItemFromJson } from "@/lib/registry"
+import { ExamplePricingTable01 } from "@/registry/examples/pricing-table-01"
 
 const items = [
   {
@@ -27,6 +28,13 @@ const items = [
     example: {
       name: "example-inline-text-01",
       component: ExampleInlineText01,
+    },
+  },
+  {
+    name: "pricing-table",
+    example: {
+      name: "example-pricing-table-01",
+      component: ExamplePricingTable01,
     },
   },
 ]

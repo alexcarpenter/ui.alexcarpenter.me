@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils"
-import { Slot } from "radix-ui"
+import { Slot } from "@radix-ui/react-slot"
 
 export function InfoList({ className, ...props }: React.ComponentProps<"ul">) {
   return (
@@ -61,7 +61,7 @@ export function InfoListText({
   asChild,
   ...props
 }: React.ComponentProps<"p"> & { asChild?: boolean }) {
-  const Comp = asChild ? Slot.Root : "p"
+  const Comp = asChild ? Slot : "p"
   return (
     <Comp
       {...props}
