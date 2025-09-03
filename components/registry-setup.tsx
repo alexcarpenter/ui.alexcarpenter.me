@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard"
 import { cn } from "@/lib/utils"
 import { Button } from "@/registry/default/ui/button"
 import {
@@ -12,13 +11,12 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/registry/default/ui/dialog"
-import { CheckIcon, CopyIcon } from "lucide-react"
+import { CopyTrigger } from "@/components/copy-trigger"
+import { CodeBlock } from "./code-block"
 
 export function RegistrySetup({
   className,
 }: React.ComponentProps<typeof Button>) {
-  const { isCopied, copyToClipboard } = useCopyToClipboard()
-
   return (
     <Dialog>
       <DialogTrigger asChild>
@@ -52,14 +50,14 @@ export function RegistrySetup({
               strokeWidth="32"
             ></line>
           </svg>
-          Registry
+          <span className="max-sm:sr-only">Setup Registry</span>
         </Button>
       </DialogTrigger>
       <DialogContent className="md:max-w-2xl">
         <DialogHeader>
           <DialogTitle>Setup Registry</DialogTitle>
           <DialogDescription>
-            Use the code below to configure the @alpine registry for your
+            Use the code below to configure the @alexcarpenter registry for your
             project.
           </DialogDescription>
         </DialogHeader>
@@ -67,20 +65,17 @@ export function RegistrySetup({
           Copy and paste the code into{" "}
           <code className="font-mono text-foreground">components.json</code>
         </div>
-        <div className="relative min-w-0">
-          <Button
-            variant="outline"
-            size="icon"
-            className="absolute bg-background right-4 z-10 top-4 size-8 rounded-md"
-            onClick={() => copyToClipboard(registrySetupCode)}
-          >
-            {isCopied ? <CheckIcon /> : <CopyIcon />}
-          </Button>
+        <div className="relative isolate">
           <div className="overflow-x-auto max-w-full bg-muted p-4 rounded-md">
             <pre className="text-sm font-mono">
               <code>{registrySetupCode}</code>
             </pre>
           </div>
+          <CopyTrigger
+            value={registrySetupCode}
+            className="absolute top-4 right-4"
+            aria-label="Copy setup code to clipboard."
+          />
         </div>
         <div className="font-medium">
           Then use the following command to add components:

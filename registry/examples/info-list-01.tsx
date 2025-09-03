@@ -8,39 +8,36 @@ import { Expand, Aperture, Palette } from "lucide-react"
 
 export function ExampleInfoList01() {
   return (
-    <div className="@container w-full">
-      <InfoList className="grid grid-cols-1 @md:grid-cols-3 gap-8">
-        <InfoListItem>
-          <InfoListIcon className="text-muted-foreground">
-            <Expand />
-          </InfoListIcon>
-          <InfoListText>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
-            eaque quidem rem.
-          </InfoListText>
-        </InfoListItem>
+    <InfoList className="grid grid-cols-1 @md/preview:grid-cols-3 gap-8">
+      <InfoListItem>
+        <InfoListIcon className="text-muted-foreground">
+          <Expand />
+        </InfoListIcon>
+        <InfoListText>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam
+          eaque quidem rem.
+        </InfoListText>
+      </InfoListItem>
 
-        <InfoListItem>
-          <InfoListIcon className="text-muted-foreground">
-            <Aperture />
-          </InfoListIcon>
-          <InfoListText>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga porro
-            magnam expedita blanditiis recusandae excepturi veritatis
-            repudiandae.
-          </InfoListText>
-        </InfoListItem>
+      <InfoListItem>
+        <InfoListIcon className="text-muted-foreground">
+          <Aperture />
+        </InfoListIcon>
+        <InfoListText>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga porro
+          magnam expedita blanditiis recusandae excepturi veritatis repudiandae.
+        </InfoListText>
+      </InfoListItem>
 
-        <InfoListItem>
-          <InfoListIcon className="text-muted-foreground">
-            <Palette />
-          </InfoListIcon>
-          <InfoListText>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus
-            excepturi doloribus velit qui enim.
-          </InfoListText>
-        </InfoListItem>
-      </InfoList>
-    </div>
+      <InfoListItem>
+        <InfoListIcon className="text-muted-foreground">
+          <Palette />
+        </InfoListIcon>
+        <InfoListText>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus
+          excepturi doloribus velit qui enim.
+        </InfoListText>
+      </InfoListItem>
+    </InfoList>
   )
 }
