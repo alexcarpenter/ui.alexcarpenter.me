@@ -50,7 +50,7 @@ export function AddCommand({ registryItem }: { registryItem: RegistryItem }) {
           ></line>
         </svg>
       )}
-      {`@alexcarpenter/${registryItem.name}`}
+      <span className="max-sm:sr-only">{`@alexcarpenter/${registryItem.name}`}</span>
     </Button>
   )
 }

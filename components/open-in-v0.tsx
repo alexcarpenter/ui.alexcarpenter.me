@@ -20,7 +20,7 @@ export function OpenInV0({
         target="_blank"
         rel="noreferrer"
       >
-        Open in{" "}
+        <span className="max-sm:sr-only">Open in </span>
         <svg
           viewBox="0 0 40 20"
           fill="none"
