@@ -54,8 +54,8 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${fontSans.variable} font-sans`}>
         <Providers>
-          <header className="border-b">
-            <div className="max-w-7xl mx-auto flex items-center px-4 py-6">
+          <header className="border-b sticky top-0 z-40 bg-background/80 backdrop-blur-sm">
+            <div className="max-w-7xl mx-auto flex items-center p-4">
               <div className="flex items-center gap-4">
                 <Link href="/">ui.alexcarpenter.me</Link>
                 <Separator orientation="vertical" className="!h-6" />
