@@ -49,7 +49,11 @@ export default async function Home() {
             return null
           }
           return (
-            <section key={registryItem.title} className="flex flex-col gap-4">
+            <section
+              key={registryItem.title}
+              className="flex flex-col gap-4 scroll-mt-24"
+              id={item.name}
+            >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <h2 className="text-sm line-clamp-1 font-medium">
