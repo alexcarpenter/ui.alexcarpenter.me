@@ -35,7 +35,9 @@ export function ExamplePricingTable01() {
             <PricingTableCardTitle>Basic</PricingTableCardTitle>
             <PricingTableCardDescription>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
-              impedit.
+              impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Facilis, impedit. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Facilis, impedit.
             </PricingTableCardDescription>
             <PricingTableCardAction>
               <PricingTableCardPrice monthly={25} yearly={20} />
@@ -49,7 +51,7 @@ export function ExamplePricingTable01() {
                     <BadgeCheck />
                   </PricingTableCardListIcon>
                   <PricingTableCardListText>
-                    Lorem ipsum dolor sit amet.
+                    Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                   </PricingTableCardListText>
                 </PricingTableCardListItem>
               ))}

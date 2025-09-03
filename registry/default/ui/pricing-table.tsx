@@ -321,7 +321,7 @@ export function PricingTableCardDescription({
   return (
     <CardDescription
       className={cn(
-        "text-muted-foreground col-span-full row-start-2 text-sm",
+        "text-muted-foreground col-span-full row-start-2 text-sm line-clamp-2",
         className
       )}
       {...props}
