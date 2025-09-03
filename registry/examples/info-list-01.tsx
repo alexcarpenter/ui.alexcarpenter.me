@@ -11,7 +11,7 @@ export function ExampleInfoList01() {
     <div className="@container w-full">
       <InfoList className="grid grid-cols-1 @md:grid-cols-3 gap-8">
         <InfoListItem>
-          <InfoListIcon>
+          <InfoListIcon className="text-muted-foreground">
             <Expand />
           </InfoListIcon>
           <InfoListText>
@@ -21,7 +21,7 @@ export function ExampleInfoList01() {
         </InfoListItem>
 
         <InfoListItem>
-          <InfoListIcon>
+          <InfoListIcon className="text-muted-foreground">
             <Aperture />
           </InfoListIcon>
           <InfoListText>
@@ -32,7 +32,7 @@ export function ExampleInfoList01() {
         </InfoListItem>
 
         <InfoListItem>
-          <InfoListIcon>
+          <InfoListIcon className="text-muted-foreground">
             <Palette />
           </InfoListIcon>
           <InfoListText>

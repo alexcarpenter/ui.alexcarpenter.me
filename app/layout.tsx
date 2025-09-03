@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Alex Carpenter",
   },
   description,
-  // metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
   manifest: `${process.env.NEXT_PUBLIC_BASE_URL}/site.webmanifest`,
   openGraph: {
     images: [
