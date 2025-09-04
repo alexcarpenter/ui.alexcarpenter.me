@@ -33,9 +33,9 @@ export function InfoListHeader({
 }: React.ComponentProps<"header">) {
   return (
     <header
-      {...props}
       className={cn("flex gap-4", className)}
-      data-slot="header"
+      data-slot="info-list-header"
+      {...props}
     />
   )
 }
