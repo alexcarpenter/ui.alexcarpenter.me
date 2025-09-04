@@ -1,3 +1,4 @@
+"use client"
 import {
   PricingTable,
   PricingTableCard,
@@ -38,7 +39,13 @@ export function ExamplePricingTable01() {
               impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </PricingTableCardDescription>
             <PricingTableCardAction>
-              <PricingTableCardPrice monthly={25} yearly={20} />
+              <PricingTableCardPrice
+                monthly={25}
+                yearly={20}
+                suffix={(billingPeriod) =>
+                  billingPeriod === "monthly" ? "/mo" : "/yr"
+                }
+              />
             </PricingTableCardAction>
           </PricingTableCardHeader>
           <PricingTableCardContent>
@@ -68,7 +75,13 @@ export function ExamplePricingTable01() {
               impedit.
             </PricingTableCardDescription>
             <PricingTableCardAction>
-              <PricingTableCardPrice monthly={50} yearly={40} />
+              <PricingTableCardPrice
+                monthly={50}
+                yearly={40}
+                suffix={(billingPeriod) =>
+                  billingPeriod === "monthly" ? "/mo" : "/yr"
+                }
+              />
             </PricingTableCardAction>
           </PricingTableCardHeader>
           <PricingTableCardContent>
