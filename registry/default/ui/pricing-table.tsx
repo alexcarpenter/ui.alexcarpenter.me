@@ -153,8 +153,8 @@ export function PricingTableSwitchItem({
         },
         className
       )}
-      {...props}
       data-active={billingPeriod === value}
+      {...props}
     >
       {children}
     </span>
@@ -306,7 +306,7 @@ export function PricingTableCardBadge({
   return (
     <Badge
       className={cn(
-        "absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2",
+        "absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2",
         className
       )}
       {...props}
@@ -330,7 +330,7 @@ export function PricingTableCardDescription({
   return (
     <CardDescription
       className={cn(
-        "text-muted-foreground col-span-full row-start-2 text-sm line-clamp-2",
+        "text-muted-foreground col-span-full row-start-2 line-clamp-2 text-sm",
         className
       )}
       {...props}
@@ -338,10 +338,10 @@ export function PricingTableCardDescription({
   )
 }
 
-export function PricingTableCardAction(
+export function PricingTableCardSlot(
   props: React.ComponentProps<typeof CardAction>
 ) {
-  return <CardAction {...props} />
+  return <CardAction {...props} data-slot="card-action testing" />
 }
 
 export function PricingTableCardPrice({
@@ -373,11 +373,11 @@ export function PricingTableCardPrice({
         "[&::part(suffix)]:text-muted-foreground text-lg font-semibold",
         className
       )}
-      {...props}
       locales={locale}
       format={priceFormatterOptions}
       value={currentPrice}
       suffix={typeof suffix === "function" ? suffix(billingPeriod) : suffix}
+      {...props}
     />
   )
 }
@@ -404,7 +404,7 @@ export function PricingTableCardListItem({
   className,
   ...props
 }: React.ComponentProps<typeof InfoListItem>) {
-  return <InfoListItem {...props} className={cn("gap-2 text-sm", className)} />
+  return <InfoListItem className={cn("gap-2 text-sm", className)} {...props} />
 }
 
 export function PricingTableCardListIcon({
@@ -413,8 +413,8 @@ export function PricingTableCardListIcon({
 }: React.ComponentProps<typeof InfoListIcon>) {
   return (
     <InfoListIcon
-      {...props}
       className={cn("text-muted-foreground", className)}
+      {...props}
     />
   )
 }

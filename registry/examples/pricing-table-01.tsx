@@ -2,7 +2,7 @@
 import {
   PricingTable,
   PricingTableCard,
-  PricingTableCardAction,
+  PricingTableCardSlot,
   PricingTableCardBadge,
   PricingTableCardButton,
   PricingTableCardContent,
@@ -28,7 +28,9 @@ export function ExamplePricingTable01() {
       <PricingTableSwitchGroup>
         <PricingTableSwitchItem value="monthly">Monthly</PricingTableSwitchItem>
         <PricingTableSwitch />
-        <PricingTableSwitchItem value="yearly">Yearly</PricingTableSwitchItem>
+        <PricingTableSwitchItem value="yearly">
+          Yearly 20% off
+        </PricingTableSwitchItem>
       </PricingTableSwitchGroup>
       <PricingTableGrid>
         <PricingTableCard>
@@ -38,15 +40,9 @@ export function ExamplePricingTable01() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
               impedit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </PricingTableCardDescription>
-            <PricingTableCardAction>
-              <PricingTableCardPrice
-                monthly={25}
-                yearly={20}
-                suffix={(billingPeriod) =>
-                  billingPeriod === "monthly" ? "/mo" : "/yr"
-                }
-              />
-            </PricingTableCardAction>
+            <PricingTableCardSlot>
+              <PricingTableCardPrice monthly={25} yearly={20} suffix="/mo" />
+            </PricingTableCardSlot>
           </PricingTableCardHeader>
           <PricingTableCardContent>
             <PricingTableCardList>
@@ -74,15 +70,9 @@ export function ExamplePricingTable01() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis,
               impedit.
             </PricingTableCardDescription>
-            <PricingTableCardAction>
-              <PricingTableCardPrice
-                monthly={50}
-                yearly={40}
-                suffix={(billingPeriod) =>
-                  billingPeriod === "monthly" ? "/mo" : "/yr"
-                }
-              />
-            </PricingTableCardAction>
+            <PricingTableCardSlot>
+              <PricingTableCardPrice monthly={50} yearly={40} suffix="/mo" />
+            </PricingTableCardSlot>
           </PricingTableCardHeader>
           <PricingTableCardContent>
             <PricingTableCardList>

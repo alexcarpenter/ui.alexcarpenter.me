@@ -57,21 +57,21 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark h-full" suppressHydrationWarning>
       <body
-        className={cn("font-sans antialiased flex flex-col min-h-full", [
+        className={cn("flex min-h-full flex-col font-sans antialiased", [
           fontSans.variable,
           fontMono.variable,
         ])}
       >
         <Providers>
-          <header className="border-b sticky top-0 z-40 bg-background/80 backdrop-blur-sm">
-            <div className="max-w-7xl mx-auto flex items-center p-4">
-              <h1 className="text-muted-foreground font-medium text-sm tracking-tight">
+          <header className="bg-background/80 sticky top-0 z-40 border-b backdrop-blur-sm">
+            <div className="mx-auto flex max-w-7xl items-center p-4">
+              <h1 className="text-muted-foreground text-sm font-medium tracking-tight">
                 shadcn/ui registry by{" "}
                 <a
                   href="https://alexcarpenter.me"
                   target="_blank"
                   rel="noopenner noreferrer"
-                  className="underline text-foreground"
+                  className="text-foreground underline"
                 >
                   Alex Carpenter
                 </a>

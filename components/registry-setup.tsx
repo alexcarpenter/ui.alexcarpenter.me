@@ -62,11 +62,11 @@ export function RegistrySetup({
         </DialogHeader>
         <div className="font-medium">
           Copy and paste the code into{" "}
-          <code className="font-mono text-foreground">components.json</code>
+          <code className="text-foreground font-mono">components.json</code>
         </div>
         <div className="relative isolate">
-          <div className="overflow-x-auto max-w-full bg-muted p-4 rounded-md">
-            <pre className="text-sm font-mono">
+          <div className="bg-muted max-w-full overflow-x-auto rounded-md p-4">
+            <pre className="font-mono text-sm">
               <code>{registrySetupCode}</code>
             </pre>
           </div>
@@ -79,8 +79,8 @@ export function RegistrySetup({
         <div className="font-medium">
           Then use the following command to add components:
         </div>
-        <div className="overflow-x-auto bg-muted p-4 rounded-md">
-          <pre className="text-sm font-mono">
+        <div className="bg-muted overflow-x-auto rounded-md p-4">
+          <pre className="font-mono text-sm">
             <code>npx shadcn@latest add @alexcarpenter/[component-name]</code>
           </pre>
         </div>

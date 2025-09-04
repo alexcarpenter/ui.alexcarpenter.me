@@ -41,7 +41,7 @@ const items = [
 
 export default async function Home() {
   return (
-    <main className="max-w-7xl mx-auto w-full flex flex-col px-4 py-12 flex-1 gap-12">
+    <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-12 px-4 py-12">
       {await Promise.all(
         items.map(async (item) => {
           const registryItem = await getRegistryItemFromJson(item.name)
@@ -51,19 +51,19 @@ export default async function Home() {
           return (
             <section
               key={registryItem.title}
-              className="flex flex-col gap-4 scroll-mt-24"
+              className="flex scroll-mt-24 flex-col gap-4"
               id={item.name}
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
-                  <h2 className="text-sm line-clamp-1 font-medium">
+                  <h2 className="line-clamp-1 text-sm font-medium">
                     {registryItem.title}
                   </h2>
                   <Separator
                     orientation="vertical"
-                    className="!h-4 hidden lg:flex"
+                    className="hidden !h-4 lg:flex"
                   />
-                  <div className="text-sm text-muted-foreground line-clamp-1 hidden lg:flex">
+                  <div className="text-muted-foreground line-clamp-1 hidden text-sm lg:flex">
                     {registryItem.description}
                   </div>
                 </div>

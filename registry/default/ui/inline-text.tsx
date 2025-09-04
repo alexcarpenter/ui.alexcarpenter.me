@@ -12,6 +12,7 @@ export function InlineText({
 
   return (
     <Comp
+      data-slot="inline-text"
       className={cn("relative inline-block pr-[1.25em]", className)}
       {...props}
     />
@@ -24,8 +25,9 @@ export function InlineTextIcon({
 }: React.ComponentProps<"span">) {
   return (
     <span
+      data-slot="inline-text-icon"
       className={cn(
-        "absolute ml-[.25em] inline-flex h-[1lh] items-center flex-none [&>svg]:size-[1em]",
+        "absolute ml-[.25em] inline-flex h-[1lh] flex-none items-center [&>svg]:size-[1em]",
         className
       )}
       {...props}

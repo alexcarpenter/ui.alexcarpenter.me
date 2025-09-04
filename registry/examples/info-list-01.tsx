@@ -8,7 +8,7 @@ import { Expand, Aperture, Palette } from "lucide-react"
 
 export function ExampleInfoList01() {
   return (
-    <InfoList className="grid grid-cols-1 @md/preview:grid-cols-3 gap-8">
+    <InfoList className="grid grid-cols-1 gap-8 @md/preview:grid-cols-3">
       <InfoListItem>
         <InfoListIcon className="text-muted-foreground">
           <Expand />
