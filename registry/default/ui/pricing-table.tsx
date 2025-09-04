@@ -43,6 +43,7 @@ type PricingTableContextValue = {
   setBillingPeriod: (period: BillingPeriod) => void
   priceFormatter: Intl.NumberFormat
   priceFormatterOptions: PriceFormatterOptions
+  locale: Intl.LocalesArgument
 }
 
 const defaultPriceFormatterOptions: PriceFormatterOptions = {
@@ -56,6 +57,7 @@ const PricingTableContext = React.createContext<PricingTableContextValue>({
   setBillingPeriod: () => {},
   priceFormatter: new Intl.NumberFormat("en-US", defaultPriceFormatterOptions),
   priceFormatterOptions: defaultPriceFormatterOptions,
+  locale: "en-US",
 })
 
 export const usePricingTableContext = () =>
@@ -95,8 +97,15 @@ export function PricingTable({
       setBillingPeriod,
       priceFormatter,
       priceFormatterOptions,
+      locale,
     }),
-    [billingPeriod, setBillingPeriod, priceFormatter, priceFormatterOptions]
+    [
+      billingPeriod,
+      setBillingPeriod,
+      priceFormatter,
+      priceFormatterOptions,
+      locale,
+    ]
   )
 
   return (
@@ -349,7 +358,8 @@ export function PricingTableCardPrice({
   yearly?: number
   suffix?: string | ((billingPeriod: BillingPeriod) => string)
 }) {
-  const { billingPeriod, priceFormatterOptions } = usePricingTableContext()
+  const { billingPeriod, priceFormatterOptions, locale } =
+    usePricingTableContext()
 
   if (!monthly) {
     return null
@@ -364,6 +374,7 @@ export function PricingTableCardPrice({
         className
       )}
       {...props}
+      locales={locale}
       format={priceFormatterOptions}
       value={currentPrice}
       suffix={typeof suffix === "function" ? suffix(billingPeriod) : suffix}
