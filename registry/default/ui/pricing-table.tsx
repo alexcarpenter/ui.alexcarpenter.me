@@ -127,7 +127,10 @@ export function PricingTableSwitchGroup({
 }: React.ComponentProps<"div">) {
   return (
     <div
-      className={cn("mb-16 flex items-center justify-center gap-2", className)}
+      className={cn(
+        "mb-16 grid grid-cols-[1fr_theme(spacing.8)_1fr] gap-2",
+        className
+      )}
       {...props}
     >
       {children}
@@ -147,7 +150,7 @@ export function PricingTableSwitchItem({
   return (
     <span
       className={cn(
-        "text-sm font-semibold",
+        "truncate text-sm font-semibold first:text-right",
         {
           "text-primary": billingPeriod === value,
         },
