@@ -22,7 +22,7 @@ const description = "shadcn/ui registry by Alex Carpenter"
 
 export const metadata: Metadata = {
   title: {
-    default: `${title} | ${description}`,
+    default: `${title}`,
     template: "%s | Alex Carpenter",
   },
   description,
@@ -65,19 +65,17 @@ export default function RootLayout({
         <Providers>
           <header className="border-b sticky top-0 z-40 bg-background/80 backdrop-blur-sm">
             <div className="max-w-7xl mx-auto flex items-center p-4">
-              <div className="flex items-center gap-4">
-                <h1 className="text-muted-foreground font-medium text-sm tracking-tight">
-                  shadcn/ui registry by{" "}
-                  <a
-                    href="https://alexcarpenter.me"
-                    target="_blank"
-                    rel="noopenner noreferrer"
-                    className="underline text-foreground"
-                  >
-                    Alex Carpenter
-                  </a>
-                </h1>
-              </div>
+              <h1 className="text-muted-foreground font-medium text-sm tracking-tight">
+                shadcn/ui registry by{" "}
+                <a
+                  href="https://alexcarpenter.me"
+                  target="_blank"
+                  rel="noopenner noreferrer"
+                  className="underline text-foreground"
+                >
+                  Alex Carpenter
+                </a>
+              </h1>
               <div className="ml-auto flex gap-2">
                 <RegistrySetup />
                 <ModeToggle />

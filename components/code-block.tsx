@@ -14,7 +14,10 @@ export async function CodeBlock({
   if (!children || typeof children !== "string") {
     return null
   }
-  const html = await codeToHtml(children.trimEnd(), {
+  const cleanedCode = children
+    .replaceAll("@/registry/default", "@/components")
+    .trimEnd()
+  const html = await codeToHtml(cleanedCode, {
     lang: lang,
     themes: {
       dark: "github-dark",
@@ -25,7 +28,7 @@ export async function CodeBlock({
     <div className={cn("relative isolate", className)} {...props}>
       <div className="code-block" dangerouslySetInnerHTML={{ __html: html }} />
       <CopyTrigger
-        value={children.trimEnd()}
+        value={cleanedCode}
         className="absolute top-4 right-4"
         aria-label="Copy code to clipboard"
       />
